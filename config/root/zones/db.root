@@ -1,0 +1,34 @@
+$TTL 86400
+@ IN SOA ns.root. admin.root. ( 2026102106 3600 900 604800 86400 )
+@ IN NS ns.root.
+ns.root. IN A 172.30.0.10
+
+; ==================================
+; TLD UNSIGNED (Sin DS)
+; ==================================
+unsigned. IN NS ns.unsigned.
+ns.unsigned. IN A 172.30.0.20
+
+; ==================================
+; TLD SIGNED (Con DS)
+; ==================================
+signed. IN NS ns.signed.
+ns.signed. IN A 172.30.0.40
+
+; ==================================
+; TLD TEST (Con DS)
+; ==================================
+test. IN NS ns.test.
+ns.test. IN A 172.30.0.70
+signed.			IN DS 41852 13 2 4733C3BC3393E95B91449779329F603421775F61199147E17C2E1790 8E13EAB4
+test.			IN DS 46617 13 2 AB6D8536DED0CBBD6DD5DFACA03EED5B7B8205A1C2AC35E3B50FC9C4 9A34F896
+; This is a zone-signing key, keyid 14726, for .
+; Created: 20261015220115 (Thu Oct 15 22:01:15 2026)
+; Publish: 20261015220115 (Thu Oct 15 22:01:15 2026)
+; Activate: 20261015220115 (Thu Oct 15 22:01:15 2026)
+. IN DNSKEY 256 3 13 TDwDo5o5zvH0Q4wrzeO2+R19/j9JK2moXiBuQZc2ZlQyxCsKRN0DhK+g 0ytYDjHSXsQgBFcAGBUwlkBGH66tXg==
+; This is a key-signing key, keyid 23012, for .
+; Created: 20261015220115 (Thu Oct 15 22:01:15 2026)
+; Publish: 20261015220115 (Thu Oct 15 22:01:15 2026)
+; Activate: 20261015220115 (Thu Oct 15 22:01:15 2026)
+. IN DNSKEY 257 3 13 9wqomvYpBmVJrjIcC7LlqEI/5Vdq1Hy0sop/JzM5Wmce5KQR3TrIJU43 KcvBDNjK4nuugxV8dgy7D8olaOr5MA==

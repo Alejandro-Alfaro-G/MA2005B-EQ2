@@ -1,0 +1,12 @@
+$TTL 86400
+@ IN SOA ns.unsigned. admin.unsigned. ( 2026102101 3600 900 604800 86400 )
+@ IN NS ns.unsigned.
+ns.unsigned. IN A 172.30.0.20
+alpha.unsigned. IN NS ns.alpha.unsigned.
+ns.alpha.unsigned. IN A 172.30.0.30
+delta.unsigned. IN NS ns.delta.unsigned.
+ns.delta.unsigned. IN A 172.30.0.30
+epsilon.unsigned. IN NS ns.epsilon.unsigned.
+ns.epsilon.unsigned. IN A 172.30.0.30
+zeta.unsigned. IN NS ns.zeta.unsigned.
+ns.zeta.unsigned. IN A 172.30.0.30

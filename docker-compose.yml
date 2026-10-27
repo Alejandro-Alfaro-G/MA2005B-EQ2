@@ -1,0 +1,117 @@
+services:
+  test:
+    image: ubuntu/bind9:latest
+    container_name: dns-test
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.70
+    volumes:
+      - ./test/named.conf:/etc/bind/named.conf:ro
+      - ./test/zones:/var/lib/bind
+    restart: unless-stopped
+
+  test-hijos:
+    image: ubuntu/bind9:latest
+    container_name: dns-test-hijos
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.80
+    volumes:
+      - ./test-hijos/named.conf:/etc/bind/named.conf:ro
+      - ./test-hijos/zones:/var/lib/bind
+    restart: unless-stopped
+
+  root:
+    image: ubuntu/bind9:latest
+    container_name: dns-root
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.10
+    volumes:
+      - ./root/named.conf:/etc/bind/named.conf:ro
+      - ./root/zones:/var/lib/bind
+    restart: unless-stopped
+
+  unsigned:
+    image: ubuntu/bind9:latest
+    container_name: dns-unsigned
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.20
+    volumes:
+      - ./unsigned/named.conf:/etc/bind/named.conf:ro
+      - ./unsigned/zones:/var/lib/bind
+    restart: unless-stopped
+
+  alpha:
+    image: ubuntu/bind9:latest
+    container_name: dns-alpha
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.30
+    volumes:
+      - ./alpha/named.conf:/etc/bind/named.conf:ro
+      - ./alpha/zones:/var/lib/bind
+    restart: unless-stopped
+
+  signed:
+    image: ubuntu/bind9:latest
+    container_name: dns-signed
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.40
+    volumes:
+      - ./signed/named.conf:/etc/bind/named.conf:ro
+      - ./signed/zones:/var/lib/bind
+    restart: unless-stopped
+
+  beta:
+    image: ubuntu/bind9:latest
+    container_name: dns-beta
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.50
+    volumes:
+      - ./beta/named.conf:/etc/bind/named.conf:ro
+      - ./beta/zones:/var/lib/bind
+    restart: unless-stopped
+
+  gamma:
+    image: ubuntu/bind9:latest
+    container_name: dns-gamma
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.60
+    volumes:
+      - ./gamma/named.conf:/etc/bind/named.conf:ro
+      - ./gamma/zones:/var/lib/bind
+    restart: unless-stopped
+
+  recursive1:
+    image: ubuntu/bind9:latest
+    container_name: dns-recursive1
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.100
+    volumes:
+      - ./recursive1/named.conf:/etc/bind/named.conf:ro
+      - ./recursive1/zones:/var/lib/bind
+    restart: unless-stopped
+
+  recursive2:
+    image: ubuntu/bind9:latest
+    container_name: dns-recursive2
+    networks:
+      dns-net:
+        ipv4_address: 172.30.0.101
+    volumes:
+      - ./recursive2/named.conf:/etc/bind/named.conf:ro
+      - ./recursive2/zones:/var/lib/bind
+    restart: unless-stopped
+
+networks:
+  dns-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24

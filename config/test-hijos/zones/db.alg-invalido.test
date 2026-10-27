@@ -1,0 +1,15 @@
+$TTL 86400
+@ IN SOA ns.alg-invalido.test. admin.alg-invalido.test. ( 2026102103 3600 900 604800 86400 )
+@ IN NS ns.alg-invalido.test.
+ns IN A 172.30.0.80
+www IN A 172.30.0.80
+; This is a zone-signing key, keyid 8158, for alg-invalido.test.
+; Created: 20261022044722 (Thu Oct 22 04:47:22 2026)
+; Publish: 20261022044722 (Thu Oct 22 04:47:22 2026)
+; Activate: 20261022044722 (Thu Oct 22 04:47:22 2026)
+alg-invalido.test. IN DNSKEY 256 3 5 AwEAAbMpuou7dhMOy/O6lGV/HOTC/lX3d2vGpX1ii+JVFqzVU521OMbw CdaXI2491KZM2BXpGlRxT8c3IvhtK7Z4T/XFmXJEkUMcO2JgI37jZUgC GqJdZDboylXGG3SjWyXeV51umdFB/MzZabjLBD6SJ99FSnOtco9bPc6r RlgIiGfr
+; This is a key-signing key, keyid 21836, for alg-invalido.test.
+; Created: 20261022044723 (Thu Oct 22 04:47:23 2026)
+; Publish: 20261022044723 (Thu Oct 22 04:47:23 2026)
+; Activate: 20261022044723 (Thu Oct 22 04:47:23 2026)
+alg-invalido.test. IN DNSKEY 257 3 5 AwEAAcbPQ0Wu9z7j8qGRMxKZMzDyMYG5IXWl6lVZ6ZdAR3J5twBY8Kgu nm2HEICCGqmQIWcYRdYjL4sQmhAU9QsWAdDHx/4VQ2E+udzVIc+eV3Dm uXCRemnnTLJfzuSTsrUeMKx7VIxo8XN1dgWqPQqUL7Gg/xnJa0ql5+tY 8BrXbxw1

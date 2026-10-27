@@ -1,0 +1,15 @@
+$TTL 86400
+@ IN SOA ns.expirado.test. admin.expirado.test. ( 2026102501 3600 900 604800 86400 )
+@ IN NS ns.expirado.test.
+ns IN A 172.30.0.80
+www IN A 172.30.0.80
+; This is a key-signing key, keyid 42962, for expirado.test.
+; Created: 20261025203852 (Sun Oct 25 20:38:52 2026)
+; Publish: 20241201000000 (Sun Dec  1 00:00:00 2024)
+; Activate: 20241201000000 (Sun Dec  1 00:00:00 2024)
+expirado.test. IN DNSKEY 257 3 13 +Sp5MMMXnieFJUFAyWau9S9b71n/glf3qo7KS97sc72FBRG6Bd7TYtyl uWRaKl+TtOF08LZu3yA8rrsN8LfsFA==
+; This is a zone-signing key, keyid 48768, for expirado.test.
+; Created: 20261025203851 (Sun Oct 25 20:38:51 2026)
+; Publish: 20241201000000 (Sun Dec  1 00:00:00 2024)
+; Activate: 20241201000000 (Sun Dec  1 00:00:00 2024)
+expirado.test. IN DNSKEY 256 3 13 8Bx99ZhybXcJ2eO2z8UAak8JPXYYjzEwX3VxQ0XjYGRg4FBIsKRzYtuv SGAjTSmhSUnjxbcOpRm7yEo290duyw==

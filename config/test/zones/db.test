@@ -1,0 +1,29 @@
+$TTL 86400
+@ IN SOA ns.test. admin.test. ( 2026102106 3600 900 604800 86400 )
+@ IN NS ns.test.
+ns.test. IN A 172.30.0.70
+
+expirado IN NS ns.expirado.test.
+ns.expirado IN A 172.30.0.80
+
+ds-roto IN NS ns.ds-roto.test.
+ns.ds-roto IN A 172.30.0.80
+
+alg-invalido IN NS ns.alg-invalido.test.
+ns.alg-invalido IN A 172.30.0.80
+
+; DS ROTO INTENCIONAL: Key Tag 65000 (en rango uint16) con digest no coincidente
+ds-roto.test. IN DS 65000 13 2 00112233445566778899AABBCCDDEEFF00112233445566778899AABBCCDDEEFF
+expirado.test.		IN DS 26473 13 2 848B0135272C7D31A7910C75AEDE35C09B5925A4E850457ECBB42880 DAE20EBA
+alg-invalido.test.	IN DS 21836 5 2 AE39209F2E155C661447C8F38D067C380F409C5ABA2175ED637F9649 E485DDB7
+; This is a zone-signing key, keyid 13700, for test.
+; Created: 20261022044247 (Thu Oct 22 04:42:47 2026)
+; Publish: 20261022044247 (Thu Oct 22 04:42:47 2026)
+; Activate: 20261022044247 (Thu Oct 22 04:42:47 2026)
+test. IN DNSKEY 256 3 13 MlRsXTOD+6RX4I0MhzEQ1x4f4ekQUcyTqpHJJfrL4te5q9V/uHh1Jij8 x/gGxlNioSHMAyQ1E9fpSWeR0SzpPA==
+; This is a key-signing key, keyid 46617, for test.
+; Created: 20261022044247 (Thu Oct 22 04:42:47 2026)
+; Publish: 20261022044247 (Thu Oct 22 04:42:47 2026)
+; Activate: 20261022044247 (Thu Oct 22 04:42:47 2026)
+test. IN DNSKEY 257 3 13 DmmCdB0IppkyMrh5zshcyViAnrvtcyNglSRgTJx9iNBMvxnAE0bBz/I6 vKt5iLpPnmEgu4G8Z9llsFSL27XHhg==
+expirado.test.		IN DS 42962 13 2 BD59103D67F79C0A27369A1D773A86882617F789880722A9FBE91B07 BF232194

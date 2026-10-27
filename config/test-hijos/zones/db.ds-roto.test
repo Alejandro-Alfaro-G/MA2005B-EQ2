@@ -1,0 +1,15 @@
+$TTL 86400
+@ IN SOA ns.ds-roto.test. admin.ds-roto.test. ( 2026102101 3600 900 604800 86400 )
+@ IN NS ns.ds-roto.test.
+ns IN A 172.30.0.80
+www IN A 172.30.0.80
+; This is a key-signing key, keyid 21621, for ds-roto.test.
+; Created: 20261022044221 (Thu Oct 22 04:42:21 2026)
+; Publish: 20261022044221 (Thu Oct 22 04:42:21 2026)
+; Activate: 20261022044221 (Thu Oct 22 04:42:21 2026)
+ds-roto.test. IN DNSKEY 257 3 13 vXJurWiXelp9BByTzxbWF+e0AjwLCfYV9dVWpbeg4xcJiApUBDsS1DfI AkCBCugVHcW4iOLQzleCT600GvOQSQ==
+; This is a zone-signing key, keyid 30636, for ds-roto.test.
+; Created: 20261022044221 (Thu Oct 22 04:42:21 2026)
+; Publish: 20261022044221 (Thu Oct 22 04:42:21 2026)
+; Activate: 20261022044221 (Thu Oct 22 04:42:21 2026)
+ds-roto.test. IN DNSKEY 256 3 13 ktWLk7yb2yJGcGOlCeDjWrkALO38bbx6LfIR5JNT8Jo5J/XH3jgwvCOj SSkqFXM1Bdxxz4/PwqnluKLoDW8bWw==
