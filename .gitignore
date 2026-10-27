@@ -1,0 +1,23 @@
+# Artefactos criptográficos generados dinámicamente
+**/zones/K*
+**/zones/*.key
+**/zones/*.private
+**/zones/dsset-*
+**/zones/*.signed
+**/zones/*.signed.signed
+
+# Trazas de red y archivos de captura pesados
+*.pcap
+*.pcapng
+
+# Salidas de texto y logs
+*.log
+evidencia_auditoria_reto4.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Archivos de entorno y SO
+.DS_Store
+*.swp
